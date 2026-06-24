@@ -1,0 +1,1120 @@
+:root {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f8fbff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(7, 91, 216, 0.09), transparent 28rem),
+    #f8fbff;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+/* NAVIGATION */
+
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0 10%;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e6edf7;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+  backdrop-filter: blur(14px);
+}
+
+.brand-button {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  border: none;
+  background: transparent;
+  color: #073f96;
+  font-size: 1.85rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #075bd8, #0a7d3d);
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 12px 24px rgba(7, 91, 216, 0.25);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.nav-links button {
+  border: none;
+  background: transparent;
+  color: #536072;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.45rem 0;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-links button.active,
+.nav-links button:hover {
+  color: #075bd8;
+  border-bottom-color: #075bd8;
+}
+
+.login-button {
+  border: none;
+  border-radius: 14px;
+  background: #0646a8;
+  color: white;
+  padding: 0.9rem 1.35rem;
+  font-weight: 800;
+  box-shadow: 0 14px 28px rgba(6, 70, 168, 0.22);
+}
+
+/* HOME PAGE */
+
+.home-page {
+  min-height: calc(100vh - 88px);
+}
+
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 4.5rem 10% 6rem;
+  background:
+    radial-gradient(circle at 72% 42%, rgba(95, 220, 179, 0.22), transparent 26rem),
+    linear-gradient(180deg, #f9fcff 0%, #eef7ff 100%);
+}
+
+.hero-content {
+  max-width: 680px;
+}
+
+.trust-badge,
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #075bd8;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+}
+
+.trust-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: #dfeaff;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.95rem;
+  margin-bottom: 1.7rem;
+}
+
+.badge-icon {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #075bd8;
+  color: white;
+}
+
+.hero-content h1 {
+  margin: 0;
+  color: #073f96;
+  font-size: clamp(3rem, 6vw, 5.1rem);
+  line-height: 1.08;
+  letter-spacing: -0.07em;
+}
+
+.hero-content h1 span {
+  color: #0a7d3d;
+}
+
+.hero-content p {
+  max-width: 620px;
+  margin: 1.5rem 0 2.25rem;
+  color: #4b5563;
+  font-size: 1.16rem;
+  line-height: 1.75;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.primary-button,
+.secondary-button {
+  min-width: 170px;
+  height: 58px;
+  border-radius: 15px;
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.primary-button {
+  border: none;
+  background: #075bd8;
+  color: white;
+  box-shadow: 0 16px 30px rgba(7, 91, 216, 0.24);
+}
+
+.secondary-button {
+  border: 1.5px solid #c7d2e4;
+  background: white;
+  color: #172033;
+}
+
+/* HERO CARD */
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.medical-card {
+  width: min(100%, 500px);
+  padding: 1.5rem;
+  border-radius: 2rem;
+  background: white;
+  border: 1px solid #e6edf7;
+  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.14);
+}
+
+.medical-card-header,
+.distance-card,
+.medicine-search-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.mini-label {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.medical-card h2 {
+  margin: 0.25rem 0 0;
+  color: #073f96;
+}
+
+.status-pill {
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: #e8f8ef;
+  color: #0a7d3d;
+  font-weight: 900;
+  font-size: 0.85rem;
+}
+
+.medicine-search-preview,
+.distance-card {
+  margin-top: 1rem;
+  padding: 1.1rem;
+  border-radius: 1.25rem;
+  background: #f5f8fc;
+  border: 1px solid #e6edf7;
+}
+
+.algorithm-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.algorithm-stack span {
+  padding: 0.55rem 0.75rem;
+  border-radius: 999px;
+  background: #edf4ff;
+  color: #075bd8;
+  font-size: 0.85rem;
+  font-weight: 900;
+}
+
+/* FLOATING SEARCH */
+
+.floating-search-panel {
+  position: relative;
+  z-index: 6;
+  width: min(850px, calc(100% - 2rem));
+  min-height: 82px;
+  display: grid;
+  grid-template-columns: 1.3fr 1px 1fr 60px;
+  align-items: center;
+  gap: 1.2rem;
+  margin: -41px auto 3.5rem;
+  padding: 0.75rem;
+  border: 1px solid #c9d4e8;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+}
+
+.search-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 0.9rem;
+  color: #6b7280;
+}
+
+.search-divider {
+  height: 42px;
+  background: #c9d4e8;
+}
+
+.search-button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 16px;
+  background: #0646a8;
+  color: white;
+  font-size: 1.8rem;
+  box-shadow: 0 10px 20px rgba(6, 70, 168, 0.22);
+}
+
+/* GENERAL PAGE */
+
+.page {
+  width: min(1140px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 3rem 0 5rem;
+}
+
+.page h1 {
+  margin: 0 0 1rem;
+  color: #073f96;
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  letter-spacing: -0.05em;
+}
+
+.page p {
+  line-height: 1.7;
+  color: #536072;
+}
+
+.home-info-grid,
+.grid,
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  gap: 1.2rem;
+}
+
+.info-card,
+.card,
+.search-card,
+.workflow-card,
+.selected-medicine-card,
+.loading-card {
+  background: white;
+  border: 1px solid #e6edf7;
+  border-radius: 1.35rem;
+  padding: 1.4rem;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.07);
+}
+
+.info-card h2,
+.card h2,
+.workflow-card h3 {
+  color: #073f96;
+}
+
+.info-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #edf4ff;
+  color: #075bd8;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+/* SEARCH PAGE */
+
+.search-page {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.search-hero {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.search-card {
+  padding: 1rem;
+}
+
+.search-input-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.9rem;
+}
+
+.search-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  background: #f8fbff;
+}
+
+.search-input-wrap span {
+  color: #075bd8;
+  font-size: 1.6rem;
+}
+
+.search-input-wrap input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 1.05rem 0;
+  outline: none;
+}
+
+.search-action-button,
+.clear-button {
+  border: none;
+  border-radius: 1rem;
+  padding: 0 1.2rem;
+  font-weight: 900;
+}
+
+.search-action-button {
+  background: #075bd8;
+  color: white;
+  box-shadow: 0 12px 24px rgba(7, 91, 216, 0.18);
+}
+
+.clear-button {
+  border: 1px solid #cbd5e1;
+  background: white;
+  color: #536072;
+}
+
+.mode-toggle {
+  display: inline-flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.4rem;
+  border-radius: 999px;
+  background: #edf4ff;
+}
+
+.mode-toggle button {
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: #536072;
+  padding: 0.65rem 1rem;
+  font-weight: 900;
+}
+
+.mode-toggle button.active {
+  background: #075bd8;
+  color: white;
+}
+
+.helper-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.9rem;
+}
+
+.helper-row span,
+.result-meta span {
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.suggestion-panel,
+.correction-panel,
+.empty-state {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 1.1rem;
+}
+
+.suggestion-panel {
+  background: #f8fbff;
+  border: 1px solid #e6edf7;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.suggestion-chip {
+  border: none;
+  border-radius: 999px;
+  background: #075bd8;
+  color: white;
+  padding: 0.75rem 1rem;
+  font-weight: 900;
+}
+
+.correction-panel {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+}
+
+.correction-panel button {
+  border: none;
+  border-radius: 999px;
+  background: #ea580c;
+  color: white;
+  padding: 0.75rem 1rem;
+  font-weight: 900;
+}
+
+.empty-state {
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  text-align: center;
+}
+
+.pharmacy-suggestion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.pharmacy-suggestion-card {
+  text-align: left;
+  border: 1px solid #dbeafe;
+  border-radius: 1rem;
+  background: white;
+  padding: 1rem;
+}
+
+.pharmacy-suggestion-card strong {
+  display: block;
+  color: #073f96;
+  margin-bottom: 0.35rem;
+}
+
+.pharmacy-suggestion-card span {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.selected-medicine-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 6px solid #0a7d3d;
+}
+
+.selected-medicine-card span {
+  color: #64748b;
+  font-weight: 900;
+}
+
+.selected-medicine-card strong {
+  color: #0a7d3d;
+  font-size: 1.4rem;
+}
+
+.section-heading {
+  margin: 0.5rem 0 1rem;
+}
+
+.section-heading h2 {
+  margin: 0.35rem 0;
+  color: #073f96;
+  font-size: 2rem;
+}
+
+.workflow-card {
+  border-left: 5px solid #075bd8;
+}
+
+/* RESULTS */
+
+.results-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.result-card {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 1rem;
+  border: 1px solid #dbeafe;
+  background: white;
+  border-radius: 1.25rem;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.06);
+}
+
+.result-rank {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: #075bd8;
+  color: white;
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+
+.result-header,
+.result-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.result-content h3 {
+  margin: 0;
+  color: #073f96;
+}
+
+.result-header span {
+  color: #0a7d3d;
+  font-weight: 900;
+}
+
+.result-meta {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/* COMPLEXITY */
+
+.complexity-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.07);
+}
+
+.complexity-table th,
+.complexity-table td {
+  border: 1px solid #e5e7eb;
+  padding: 0.9rem;
+  text-align: left;
+}
+
+.complexity-table th {
+  background: #073f96;
+  color: white;
+}
+
+/* LOADING */
+
+.loading-card {
+  min-height: 360px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.loader {
+  width: 54px;
+  height: 54px;
+  border: 6px solid #dbeafe;
+  border-top-color: #075bd8;
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1050px) {
+  .top-nav {
+    padding: 1rem 5%;
+    flex-wrap: wrap;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr;
+    padding: 3rem 5% 6rem;
+  }
+
+  .hero-visual {
+    order: -1;
+  }
+}
+
+@media (max-width: 760px) {
+  .top-nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .brand-button {
+    font-size: 1.55rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 0.4rem;
+  }
+
+  .login-button {
+    width: 100%;
+  }
+
+  .hero-section {
+    padding: 2.5rem 1rem 5.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .floating-search-panel,
+  .search-input-row,
+  .result-card {
+    grid-template-columns: 1fr;
+  }
+
+  .search-divider {
+    display: none;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+
+  .correction-panel,
+  .selected-medicine-card,
+  .result-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* GLOBAL INTERACTION POLISH */
+
+button,
+.interactive-card,
+.result-card,
+.info-card,
+.card,
+.algorithm-list-card,
+.pharmacy-suggestion-card,
+.accordion-card {
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease,
+    background-color 0.18s ease;
+}
+
+button:hover,
+.interactive-card:hover,
+.result-card:hover,
+.info-card:hover,
+.card:hover,
+.algorithm-list-card:hover,
+.pharmacy-suggestion-card:hover,
+.accordion-card:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.compact-section {
+  padding-bottom: 0.5rem;
+}
+
+.search-page {
+  gap: 1.75rem;
+}
+
+.search-card {
+  padding: 1.25rem;
+}
+
+.quick-examples {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0.95rem;
+}
+
+.quick-examples span {
+  color: #64748b;
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+
+.quick-examples button {
+  border: none;
+  border-radius: 999px;
+  background: #edf4ff;
+  color: #075bd8;
+  padding: 0.5rem 0.85rem;
+  font-weight: 900;
+}
+
+.quick-examples button:hover {
+  background: #075bd8;
+  color: white;
+}
+
+.workflow-card {
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+
+.active-workflow {
+  border-color: #075bd8;
+  background: #f0f6ff;
+  box-shadow: 0 18px 38px rgba(7, 91, 216, 0.13);
+}
+
+.result-details {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #f8fbff;
+  border: 1px solid #dbeafe;
+}
+
+.result-details p {
+  margin: 0.25rem 0;
+}
+
+.details-button {
+  margin-top: 1rem;
+  border: none;
+  border-radius: 999px;
+  background: #edf4ff;
+  color: #075bd8;
+  padding: 0.65rem 1rem;
+  font-weight: 900;
+}
+
+.details-button:hover {
+  background: #075bd8;
+  color: white;
+}
+
+/* ALGORITHM EXPLORER */
+
+.algorithm-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.algorithm-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.algorithm-list-card {
+  text-align: left;
+  border: 1px solid #e6edf7;
+  border-radius: 1.1rem;
+  background: white;
+  padding: 1rem;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.05);
+}
+
+.algorithm-list-card span {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #075bd8;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.algorithm-list-card strong {
+  color: #172033;
+}
+
+.algorithm-list-card.active {
+  border-color: #075bd8;
+  background: #f0f6ff;
+}
+
+.algorithm-detail-card {
+  min-height: 340px;
+}
+
+.algorithm-detail-card h2,
+.complexity-detail-card h2 {
+  margin-top: 1rem;
+  color: #073f96;
+  font-size: 2rem;
+}
+
+.algorithm-demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.algorithm-demo-grid div {
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #f8fbff;
+  border: 1px solid #e6edf7;
+}
+
+.algorithm-demo-grid span {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #64748b;
+  font-weight: 900;
+  font-size: 0.8rem;
+}
+
+.algorithm-demo-grid strong {
+  color: #172033;
+}
+
+/* COMPLEXITY PAGE */
+
+.complexity-layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.complexity-table tbody tr {
+  cursor: pointer;
+}
+
+.complexity-table tbody tr:hover,
+.complexity-table tbody tr.active-row {
+  background: #f0f6ff;
+}
+
+.complexity-detail-card {
+  position: sticky;
+  top: 110px;
+}
+
+/* ABOUT ACCORDION */
+
+.accordion-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.accordion-card {
+  background: white;
+  border: 1px solid #e6edf7;
+  border-radius: 1.25rem;
+  padding: 0.35rem 1rem;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+}
+
+.accordion-card button {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #073f96;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  font-weight: 900;
+  font-size: 1.05rem;
+}
+
+.accordion-card button:hover {
+  transform: none;
+}
+
+.accordion-card strong {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #edf4ff;
+  color: #075bd8;
+}
+
+.accordion-card p {
+  margin-top: 0;
+  padding-bottom: 1rem;
+}
+
+/* SPACING FIXES */
+
+.section-heading {
+  max-width: 760px;
+}
+
+.section-heading h1,
+.section-heading h2 {
+  margin-bottom: 0.6rem;
+}
+
+.home-info-grid {
+  margin-bottom: 4rem;
+}
+
+.results-section,
+.workflow-section {
+  margin-top: 0.5rem;
+}
+
+.result-card {
+  padding: 1.15rem;
+}
+
+.search-input-row {
+  align-items: stretch;
+}
+
+.search-action-button,
+.clear-button {
+  min-height: 54px;
+}
+
+/* RESPONSIVE FIXES */
+
+@media (max-width: 950px) {
+  .algorithm-layout,
+  .complexity-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .complexity-detail-card {
+    position: static;
+  }
+}
+
+@media (max-width: 760px) {
+  .quick-examples {
+    align-items: flex-start;
+  }
+
+  .quick-examples span {
+    width: 100%;
+  }
+
+  .algorithm-detail-card h2,
+  .complexity-detail-card h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.home-search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #172033;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 0;
+}
+
+.home-search-input::placeholder {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.floating-search-panel:focus-within {
+  border-color: #075bd8;
+  box-shadow: 0 20px 48px rgba(7, 91, 216, 0.18);
+}
+
+.search-group:focus-within .search-icon,
+.search-group:focus-within .location-icon {
+  transform: scale(1.08);
+}
+
+.search-icon,
+.location-icon {
+  transition: transform 0.18s ease;
+}
